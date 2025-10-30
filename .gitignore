@@ -1,0 +1,4 @@
+.env
+db.splite3
+__pycache_/
+staticfiles/
