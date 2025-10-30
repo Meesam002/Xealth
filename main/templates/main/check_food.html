@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Your Food</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>Check Your Food</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="food_name" placeholder="Enter food name" required>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <h2>Results for {{ result.name }}</h2>
+        <table>
+            <tr><th>Calories</th><td>{{ result.calories }}</td></tr>
+            <tr><th>Protein</th><td>{{ result.protein }}</td></tr>
+            <tr><th>Carbs</th><td>{{ result.carbs }}</td></tr>
+            <tr><th>Fat</th><td>{{ result.fat }}</td></tr>
+        </table>
+        <p><strong>Recommendation:</strong> {{ recommendation }}</p>
+    {% endif %}
+</div>
+</body>
+</html>

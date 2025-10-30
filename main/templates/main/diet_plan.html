@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Your Food</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+</head>
+<body>
+<div class="container">
+    <h2>Your Personalized Diet Plan</h2>
+<table>
+    <tr>
+        <th>Food    </th>
+        <th>Calories    </th>
+        <th>Protein (g) </th>
+        <th>Carbs (g)   </th>
+        <th>Fat (g) </th>
+    </tr>
+    {% for item in diet_data %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.calories }}</td>
+        <td>{{ item.protein }}</td>
+        <td>{{ item.carbs }}</td>
+        <td>{{ item.fat }}</td>
+    </tr>
+    {% endfor %}
+
+    <h3>Goal - {{ goal }}</h3>
+</table>
+</div>
+</body>
+</html>
