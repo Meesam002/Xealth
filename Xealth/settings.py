@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p#&8r6!db=w0!oq4f$5kp99rjh32c8%-@5+7@j-gzn@zu=a0b!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://meesam002.github.io/Xealth/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,4 +122,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
