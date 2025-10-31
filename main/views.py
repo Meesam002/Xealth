@@ -83,7 +83,7 @@ def suggest_foods(goal, diet_type):
 
 
 def get_food_data(food_name):
-    API_KEY = "sEC11ajs3AdWlBSg3hthJDuQdte8cj9n3iHqobKL"
+    API_KEY = 'sEC11ajs3AdW1BSg3hthJDuQdte8cj9n3iHqobKL'
 
     # Step 1: Search (restrict to raw/unprocessed foods)
     search_url = (
@@ -188,3 +188,4 @@ def check_food(request):
         "result": result,
         "recommendation": recommendation
     })
+
